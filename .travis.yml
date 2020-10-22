@@ -6,7 +6,7 @@ addons:
             - docker
 before_install:
     - brew update
-    - brew install docker-machine
+    - brew install docker docker-machine
     - docker-machine build -t texastoast/docker-react-test -f Dockerfile.dev .
 script:
     - docker-machine run -e CI=true texastoast/docker-react-test npm run test
