@@ -10,7 +10,7 @@ deploy:
     region: "us-east-1"
     app: "docker-react-test"
     env: "DockerReactTest-env"
-    bucket_name: "elasticbeanstalk-us-east-1-368214641134"
+    bucket: "elasticbeanstalk-us-east-1-368214641134"
     bucket_path: "docker-react-test"
     on:
         branch: main
