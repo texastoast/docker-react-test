@@ -1,7 +1,12 @@
 language: generic
-services:
-    - docker
+os: osx
+addons:
+    homebrew:
+        casks:
+            - docker
 before_install:
+    - brew update
+    - brew install docker
     - docker build -t texastoast/docker-react-test -f Dockerfile.dev .
 script:
     - docker run -e CI=true texastoast/docker-react-test npm run test
